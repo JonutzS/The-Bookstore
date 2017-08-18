@@ -1,4 +1,4 @@
-//compile-time/checked exception
+
 public class TooManyBooksException extends Exception
 {
     TooManyBooksException(){
