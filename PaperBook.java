@@ -1,6 +1,6 @@
 public class PaperBook extends Book
 {
-    private double weight; //size in MB
+    private double weight; 
     
     PaperBook(String title, double price, boolean available, double weight){
         super(title, price, available);
