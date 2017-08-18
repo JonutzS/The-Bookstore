@@ -4,12 +4,12 @@ public class Stock
 {
   private List<Book> bookList;
   
-  //1. Constructor privat
+  
   private Stock(){
     this.bookList = new ArrayList<Book>();
   }
   
-  //2. O singura instanta privata, statica si constanta de Stock
+ 
   
   private static final class SingletonHolder{
       private static final Stock INSTANCE = new Stock();
@@ -19,15 +19,13 @@ public class Stock
     return this.bookList;
   }
   
-  //3. O metoda publica si statica care sa intoarca instanta de singleton
+  
   public static Stock getInstance(){
       return SingletonHolder.INSTANCE;
   }
   
   public void getBooks(){
-      /*for(Book book: bookList){
-          System.out.println(book);
-      }*/
+      
       bookList.stream().forEach(System.out::println);
   }
   
@@ -40,11 +38,7 @@ public class Stock
   }
   
   public void getPaperBooks(){
-    //     for(Book book: bookList){
-    //         if(book instanceof PaperBook) {
-    //             System.out.println(book);
-    //         }
-    //     }
+    
       bookList
         .stream()
         .filter(carte->carte instanceof PaperBook)
