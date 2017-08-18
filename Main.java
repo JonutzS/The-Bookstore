@@ -21,16 +21,16 @@ public class Main
             }
         };
         
-        //new Thread(runnable).start();
+        new Thread(runnable).start();
 
-        /* try{
+        try{
             stock.addBook(b1);
             stock.addBook(b2);
             stock.addBook(b3);
             stock.addBook(b4);
         }catch(TooManyBooksException ex){
             System.out.println(ex.getMessage());
-        }*/
+        }
         System.out.println("1. afisare carti/eb/pb");
         System.out.println("2. adauga eb/pb titlu pret disponibilitate dimensiune");
         System.out.println("3. sterge titlu");
@@ -58,9 +58,9 @@ public class Main
                             break;
                     }
                 break;
-                //1p ptr pb
-                //1p ptr eb
-                case "adauga": //adauga pb/eb titlu price disponibilitate dimensiune/greutate
+                
+                
+                case "adauga": 
                     try{
                         double pret = Double.parseDouble(words[3]);
                         boolean disponibil = Boolean.parseBoolean(words[4]);
@@ -79,7 +79,7 @@ public class Main
                         System.out.println(e);
                     }
                 break;
-                //1p
+               
                 case "sterge":
                     boolean rez = stock.removeBook(words[1]);
                     if(rez == true){
@@ -88,14 +88,13 @@ public class Main
                         System.out.println("Eroare la stergere");
                     }
                 break;
-                //0.5
+                
                 case "exit":
                     System.exit(0);
                 break;
                 
                 default: System.out.println("Comanda inexistenta!");
-      //arh corecta a claselor 3pct
-      //0.5 lambda
+      
             }
         }
 
